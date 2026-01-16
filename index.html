@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vditor/dist/index.min.js"></script>
+</head>
+<body>
+    <div id="vditor"></div>
+    <script>
+        const vditor = new Vditor('vditor', {
+            height: '100vh',
+            outline: { enable: true },
+            cache: { enable: true }, // 本地存储，防止内容丢失
+            preview: {
+                math: { engine: 'KaTeX' }
+            },
+            toolbarConfig: {
+                pin: true,
+            },
+            mode: 'ir', // 即时渲染模式，类似 Typora
+        })
+    </script>
+</body>
+</html>
